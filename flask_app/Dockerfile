@@ -3,7 +3,7 @@ MAINTAINER vyas.amit23vyas@gmail.com
 
 RUN apt-get update -y
 RUN apt-get install python3-pip -y
-RUN apt-get instlall gunicorn3 -y
+RUN apt-get install gunicorn3 -y
 
 COPY requirements.txt reqirements.txt
 COPY covidhelp /opt/ 
