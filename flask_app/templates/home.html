@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Relief Leads</title>
+<style>
+
+.center {
+  
+  border: 3px solid rgb(179, 194, 174);
+  background-color: rgb(223, 241, 187);
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.head {
+    text-align: center;
+}
+.page{
+    background-color: rgb(96, 228, 155);
+}
+</style>
+</head>
+<body>
+<div class="page">
+    <h2 class= 'head'>Covid Relief Leads from Twitter</h2>
+    {% for i in data %}
+        <div class="center">
+            {% for j,k in i.items() %}
+                {% if j == 'url' %}
+                    <a href="{{ k }}">Tweet Link</a>
+                {% else %}
+                    {{ j }} : {{ k }}<br>
+                {% endif %}
+
+
+            {% endfor %}
+        </div>
+        <br>
+    {% endfor %}
+</div>
+</body>
+</html>
