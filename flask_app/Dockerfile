@@ -1,12 +1,12 @@
 FROM ubuntu:20.10
-MAINTAINER vyas.amit23vyas@gmail.com
+# MAINTAINER vyas.amit23vyas@gmail.com
 
 RUN apt-get update -y
 RUN apt-get install python3-pip -y
 RUN apt-get install gunicorn3 -y
 
-COPY requirements.txt reqirements.txt
-COPY covidhelp /opt/ 
+COPY requirements.txt requirements.txt
+COPY flaskapp .
 
 RUN pip3 install -r requirements.txt
 WORKDIR /opt 
